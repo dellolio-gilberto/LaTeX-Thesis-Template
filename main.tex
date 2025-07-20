@@ -1,0 +1,131 @@
+\PassOptionsToPackage{table, dvipsnames}{xcolor}
+\documentclass[a4paper,twoside,12pt]{vendor/toptesi}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\usepackage[newfloat,outputdir=build]{minted}
+\usepackage[font=small,skip=1.3pt]{caption}
+\captionsetup[listing]{position=top}
+\usepackage{subcaption}
+\usepackage{xspace}
+\usepackage{fontawesome5}
+\usepackage{minted}
+\usepackage[numbers]{natbib}
+\usepackage{etoolbox}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{afterpage}
+\usepackage{emptypage}
+\usepackage{svg}
+\usepackage{pdfpages}
+
+\pgfplotsset{compat=1.18}
+\SetupFloatingEnvironment{listing}{name=Codice}
+
+\usepackage{hyperref}
+
+\usepackage[acronym,toc,nomain,nonumberlist,nopostdot]{glossaries}
+\makeglossaries{}
+
+\hypersetup{
+    colorlinks = true,
+    allcolors=black
+}
+
+\hyphenation{di-spo-si-ti-vi}
+
+%%% workaround for listing
+% save the current meaning of \listing
+\let\savedlisting\listing{}
+% at the right spot, restore the meaning
+\AtBeginDocument{\let\listing\savedlisting}
+%%% end of workaround
+
+\def\dept{Department of Innovation Engineering}
+\def\course{Bachelor's Degree in Telecommunications Engineering}
+\def\title{Title Lorem ipsum dolor sit amet, consectetur adipiscing elit}
+\def\author{Author Name Surname}
+\def\prof{Prof.\ Name Surname}
+\def\supervisor{Doc. Eng. Name Surname}
+\def\subject{Subject}
+\def\annoacc{2025\ -\ 2026}
+\def\beforecandidate{Graduating Student}
+\def\beforetitle{thesis}
+\def\beforeprof{Supervisor}
+\def\beforesupervisor{Co-supervisor}
+\def\beforeannoacc{Academic Year}
+
+\makeatletter
+\renewcommand{\@makefntext}[1]{%
+  \scriptsize
+  \parindent1em%
+  \noindent\hb@xt@1.8em{\@makefnmark\hss}#1%
+}
+\makeatother
+
+
+\begin{document}
+
+\newcommand{\footcite}[2]{\textsuperscript{\citenum{#2}}\let\thefootnote\relax\footnote{\cite{#2} #1}}
+\newcommand{\footciteref}[1]{\textsuperscript{\citenum{#1}}}
+
+\newcommand\blankpage{%
+    \null{}
+    \thispagestyle{empty}%
+    \newpage}
+
+\input{front}
+\input{acronyms}
+
+% optional modules
+\cleardoublepage
+%\includepdf[pages=-]{modules/.pdf}
+\cleardoublepage
+%\includepdf[pages=-]{modules/.pdf}
+\cleardoublepage
+
+% \cleardoublepage
+% \input{inscription}
+% \cleardoublepage
+
+\pagenumbering{roman}
+\input{abstract}
+
+\afterpage{\blankpage}
+\tableofcontents
+
+\begingroup
+\renewcommand\lstlistlistingname{Code Listings}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\listoffigures
+\lstlistoflistings{}
+%\listoftables
+\printglossary[type=\acronymtype]
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\endgroup
+
+\blankpage\blankpage
+% Don't touch! These commands needs to fix toc!!
+\chapter*{}
+\thispagestyle{empty}
+\counterwithout{section}{chapter}
+\include{introduction}
+\counterwithin{section}{chapter}
+\include{chapter_1}
+\include{chapter_2}
+\include{chapter_3}
+\include{chapter_4}
+\include{ending}
+\include{acknoweldgements}
+
+\cleardoublepage{}
+\bibliographystyle{unsrt}
+\phantomsection{}
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliography{bibliografia}
+\end{document}

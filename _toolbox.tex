@@ -1,0 +1,258 @@
+TEX Toolbox:
+
+chaps:
+\label{chap:intro}
+\label{chap:firegex}
+\label{chap:ctfad}
+\label{chap:nfproxy}
+\label{chap:tests}
+\label{chap:notes}
+\label{chap:ending}
+
+Citations:
+
+\cite{riscv}
+\footcite{Small description}{biblio_ref_key}
+
+Skip page:
+
+\vspace{\fill}
+\newpage
+
+Immages:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/chapter2/protection.png}
+\end{figure}
+
+More images snippet:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.70\textwidth}
+        \includegraphics[width=1.0\textwidth]{images/chapter2/mcu.png}
+        \caption{Caption 1}\label{fig:mcu}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.28\textwidth}
+        \includegraphics[width=1.0\textwidth]{images/chapter2/divider.png}
+        \caption{Caption 2}\label{fig:divider}
+        \end{minipage}
+\end{figure}
+
+---
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/chapter2/step1.jpg}
+      \caption{Step 1:}\label{fig:step1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/chapter2/step2.jpg}
+      \caption{Step 2:}\label{fig:step2}
+      \end{minipage}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/chapter2/step3.jpg}
+      \caption{Step 3:}\label{fig:step2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/chapter2/step4.jpg}
+      \caption{Step 4:}\label{fig:step2}
+        \end{minipage}
+\end{figure}
+
+Subsection:
+
+\subsection{Schema A}
+
+\subsubsection{Element of A}
+
+List:
+
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \setlength{\parskip}{2pt}
+  \item element A;
+  \item element B;
+  \item element C.
+\end{itemize}
+
+
+Reference to figure:
+
+\ref{fig:federated_architecture}
+
+Tbale:
+
+\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{12pt}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \textbf{Firewall} & \textbf{0Conf} & \textbf{Easy use} & \textbf{Setup} & \textbf{Flexible} & \textbf{Trusted} \\
+        \hline
+        \texttt{Firegex} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} \\
+        \hline
+        \texttt{Nginx} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} \\
+        \hline
+        \texttt{CTF proxy} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} \\
+        \hline
+        \texttt{Fortinet} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} \\
+        \hline
+        \texttt{Suricata} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Red}\faIcon[solid]{times-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Orange}\faIcon[solid]{exclamation-circle} \end{tabular} &
+        \begin{tabular}[c]{@{}c@{}} \color{Green}\faIcon[solid]{check-circle} \end{tabular} \\
+        \hline
+    \end{tabular}
+    \caption{Comparing}\label{tab:sandboxing_solutions}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Testo in evidenzia:
+
+\texttt{rhai}
+
+Code:
+
+\begin{listing}[H]
+    \begin{minted}[
+        frame=single,
+        framerule=0.8pt,
+        fontsize=\footnotesize,
+        breaklines
+      ]{rust}
+    let sys_loop = EspSystemEventLoop::take()?;
+    let mut peripherals = Peripherals::take().unwrap();
+    let r = LedcDriver::new(
+        peripherals.ledc.channel0,
+        unsafe { get_ledc_timer(peripherals.ledc.timer0.clone_unchecked())? },
+        peripherals.pins.gpio3,
+    )?;
+    ...
+    let led = Arc::new(Mutex::new(Rgbw { r, g, b, a }));
+\end{minted}
+\vspace{-1em}
+\end{listing}
+
+Bibliografia esempi:
+
+@misc{ react_website ,
+    author = {Meta},
+    title = {React - A JavaScript library for building user interfaces},
+    howpublished = "\url{https://reactjs.org/}",
+    note = {See on 27/09/2024}
+}
+
+@article{fischer1989comparing,
+  title={Comparing structured and unstructured methodologies in firmware development},
+  author={Fischer, WA and Jost, JW},
+  journal={Hewlett-Packard Journal},
+  volume={40},
+  number={2},
+  pages={80--85},
+  year={1989},
+  publisher={HEWLETT-PACKARD CO 3000 HANOVER STREET, PALO ALTO, CA 94304}
+}
+
+@article{iee_std,
+  author={},
+  journal={IEEE Std 830-1993},
+  title={IEEE Recommended Practice for Software Requirements Specifications},
+  year={1994},
+  volume={},
+  number={},
+  pages={1-32},
+  keywords={IEEE Standards;Software;Standards organizations;Organizations;Contracts;Dams;contract;customer;prototyping;supplier;System requirements specifications},
+  doi={10.1109/IEEESTD.1994.121431}
+}
+
+@misc{barile2019analisi,
+  title={Analisi PESTLE Analisi SWOT},
+  author={Barile, Sergio},
+  year={2019},
+  publisher={Tratto da https://web. uniroma1. it: https://web. uniroma1. it~…}
+}
+
+@inproceedings{al2020internet,
+  title={Internet of things market analysis forecasts, 2020--2030},
+  author={Al-Sarawi, Shadi and Anbar, Mohammed and Abdullah, Rosni and Al Hawari, Ahmad B},
+  booktitle={2020 Fourth World Conference on smart trends in systems, security and sustainability (WorldS4)},
+  pages={449--453},
+  year={2020},
+  organization={IEEE}
+}
+
+@misc{rfc6455,
+    series =    {Request for Comments},
+    number =    6455,
+    howpublished =  {RFC 6455},
+    publisher = {RFC Editor},
+    doi =       {10.17487/RFC6455},
+    url =       {https://www.rfc-editor.org/info/rfc6455},
+    author =    {Alexey Melnikov and Ian Fette},
+    title =     {{The WebSocket Protocol}},
+    pagetotal = 71,
+    year =      2011,
+    month =     dec,
+    abstract =  {The WebSocket Protocol enables two-way communication between a client running untrusted code in a controlled environment to a remote host that has opted-in to communications from that code. The security model used for this is the origin-based security model commonly used by web browsers. The protocol consists of an opening handshake followed by basic message framing, layered over TCP. The goal of this technology is to provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections (e.g., using XMLHttpRequest or \textless{}iframe\textgreater{}s and long polling). {[}STANDARDS-TRACK{]}},
+}
+
+@report{WebAssemblyCoreSpecification1,
+  title = {{WebAssembly Core Specification}},
+  version = {1.0},
+  editor = {Rossberg, Andreas},
+  date = {2019-12-05},
+  institution = {{W3C}},
+  url = {https://www.w3.org/TR/wasm-core-1/},
+  langid = {english}
+}
+
+@cite{threejs_website,
+    author = {Three.js developers},
+    title = {Three.js - JavaScript 3D library},
+    howpublished = "\url{https://threejs.org/}",
+    note = {Visitato in data: 27/09/2024}
+}
+
+@article{oliveri2022land,
+  title={In the land of MMUs: multiarchitecture OS-agnostic virtual memory forensics},
+  author={Oliveri, Andrea and Balzarotti, Davide},
+  journal={ACM Transactions on Privacy and Security},
+  volume={25},
+  number={4},
+  pages={1--32},
+  year={2022},
+  publisher={ACM New York, NY}
+}
