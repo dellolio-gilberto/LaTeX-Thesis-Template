@@ -10,7 +10,7 @@
 \usepackage{pgfplots}
 \usepackage[newfloat,outputdir=build]{minted}
 \usepackage[font=small,skip=1.3pt]{caption}
-\captionsetup[listing]{position=top}
+%\captionsetup[listing]{position=top}
 \usepackage{subcaption}
 \usepackage{xspace}
 \usepackage{fontawesome5}
@@ -25,7 +25,7 @@
 \usepackage{pdfpages}
 
 \pgfplotsset{compat=1.18}
-\SetupFloatingEnvironment{listing}{name=Codice}
+\SetupFloatingEnvironment{listing}{name=Code}
 
 \usepackage{hyperref}
 
@@ -37,7 +37,7 @@
     allcolors=black
 }
 
-\hyphenation{di-spo-si-ti-vi}
+\hyphenation{di-spo-si-ti-ve}
 
 %%% workaround for listing
 % save the current meaning of \listing
@@ -68,7 +68,6 @@
 }
 \makeatother
 
-
 \begin{document}
 
 \newcommand{\footcite}[2]{\textsuperscript{\citenum{#2}}\let\thefootnote\relax\footnote{\cite{#2} #1}}
@@ -84,9 +83,9 @@
 
 % optional modules
 \cleardoublepage
-%\includepdf[pages=-]{modules/.pdf}
+%\includepdf[pages=-]{modules/aaa.pdf}
 \cleardoublepage
-%\includepdf[pages=-]{modules/.pdf}
+%\includepdf[pages=-]{modules/bbb.pdf}
 \cleardoublepage
 
 % \cleardoublepage
@@ -117,15 +116,13 @@
 \include{introduction}
 \counterwithin{section}{chapter}
 \include{chapter_1}
-\include{chapter_2}
-\include{chapter_3}
-\include{chapter_4}
+
 \include{ending}
 \include{acknoweldgements}
 
 \cleardoublepage{}
 \bibliographystyle{unsrt}
 \phantomsection{}
-\addcontentsline{toc}{chapter}{Bibliografia}
-\bibliography{bibliografia}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bibliography}
 \end{document}
