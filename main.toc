@@ -1,0 +1,9 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\setcounter {tocdepth}{-1}
+\contentsline {chapter}{List of Figures}{iv}{section*.1}%
+\setcounter {tocdepth}{3}
+\contentsline {chapter}{\numberline {1}Lorem ipsum}{v}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Lorem ipsum}{v}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Lorem ipsum}{v}{subsection.1.1.1}%
